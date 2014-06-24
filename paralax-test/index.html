@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Paralax.js Test</title>
+
+	<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+
+</head>
+<body>
+
+	<div id="title"><h1>PARALAX TEST</h1></div>
+	<div class="outer">
+		<div class="middle">
+			<div class="wrapper">
+				<div class="container">
+					<ul id="scene" class="scene">
+						<li class="layer" data-depth="0.00" style="z-index:0;"><img src="images/sky.png"></li>
+						<li class="layer" data-depth="0.05" style="z-index:10;"><img src="images/background-mountains.png"></li>
+						<li class="layer" data-depth="0.10" style="z-index:20;"><img src="images/foreground-mountain.png"></li>
+						<li class="layer" data-depth="0.30" style="z-index:30;"><img src="images/floor-2.png"></li>
+						<li class="layer" data-depth="0.40" style="z-index:40;"><img src="images/floor-1.png"></li>
+						<li class="layer" data-depth="0.50" style="z-index:50;"><img src="images/ballerina.png"></li>
+						<li class="layer" data-depth="0.50" style="z-index:60;"><img src="images/floor-0.png"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="scripts/parallax.js"></script>
+	<script>
+
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+
+	</script>
+
+</body>
+</html>
